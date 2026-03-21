@@ -1,0 +1,251 @@
+{
+  "model": "C:\\Users\\joon1\\Documents\\ai-companion\\best (1).pt",
+  "timestamp": "2026-03-12T14:26:36.386117",
+  "conf": 0.1,
+  "tries": 5,
+  "expectedClasses": [
+    "brave",
+    "edge",
+    "chrome",
+    "vscode",
+    "searchbar",
+    "yt",
+    "cursor"
+  ],
+  "allModelClasses": [
+    "brave",
+    "chrome",
+    "cursor",
+    "edge",
+    "searchbar",
+    "vscode",
+    "yt"
+  ],
+  "avgConfidence": {
+    "edge": 0.7971916198730469,
+    "brave": 0.4581751644611359
+  },
+  "detectionFrequency": {
+    "brave": 5,
+    "edge": 5
+  },
+  "matrix": {
+    "brave": {
+      "detected": 5,
+      "missed": 0
+    },
+    "edge": {
+      "detected": 5,
+      "missed": 0
+    },
+    "chrome": {
+      "detected": 0,
+      "missed": 5
+    },
+    "vscode": {
+      "detected": 0,
+      "missed": 5
+    },
+    "searchbar": {
+      "detected": 0,
+      "missed": 5
+    },
+    "yt": {
+      "detected": 0,
+      "missed": 5
+    },
+    "cursor": {
+      "detected": 0,
+      "missed": 5
+    }
+  },
+  "prfStats": {
+    "brave": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "edge": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "chrome": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "vscode": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "searchbar": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "yt": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "cursor": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "runs": [
+    {
+      "attempt": 1,
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\performance\\attempt-01.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7930948734283447,
+          "x1": 1039.795654296875,
+          "y1": 1041.68994140625,
+          "x2": 1063.74560546875,
+          "y2": 1069.94677734375
+        },
+        {
+          "label": "brave",
+          "conf": 0.6687585115432739,
+          "x1": 954.9024658203125,
+          "y1": 1041.424072265625,
+          "x2": 972.0352783203125,
+          "y2": 1069.328857421875
+        },
+        {
+          "label": "brave",
+          "conf": 0.19806501269340515,
+          "x1": 27.996932983398438,
+          "y1": 1036.85498046875,
+          "x2": 46.68988800048828,
+          "y2": 1060.1552734375
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\performance\\attempt-02.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7632876634597778,
+          "x1": 1039.4970703125,
+          "y1": 1041.7510986328125,
+          "x2": 1063.705078125,
+          "y2": 1069.9847412109375
+        },
+        {
+          "label": "brave",
+          "conf": 0.6747581958770752,
+          "x1": 954.9046630859375,
+          "y1": 1041.437255859375,
+          "x2": 972.039794921875,
+          "y2": 1069.289306640625
+        },
+        {
+          "label": "brave",
+          "conf": 0.19976483285427094,
+          "x1": 28.022138595581055,
+          "y1": 1036.8609619140625,
+          "x2": 46.692047119140625,
+          "y2": 1060.1580810546875
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\performance\\attempt-03.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.8109521865844727,
+          "x1": 1039.845458984375,
+          "y1": 1041.7977294921875,
+          "x2": 1063.691162109375,
+          "y2": 1069.9835205078125
+        },
+        {
+          "label": "brave",
+          "conf": 0.7517386674880981,
+          "x1": 954.9279174804688,
+          "y1": 1041.459716796875,
+          "x2": 971.7178344726562,
+          "y2": 1069.039306640625
+        },
+        {
+          "label": "brave",
+          "conf": 0.2058093249797821,
+          "x1": 27.994630813598633,
+          "y1": 1036.85009765625,
+          "x2": 46.69578552246094,
+          "y2": 1060.169921875
+        }
+      ]
+    },
+    {
+      "attempt": 4,
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\performance\\attempt-04.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7901740074157715,
+          "x1": 1039.8173828125,
+          "y1": 1041.79541015625,
+          "x2": 1063.69873046875,
+          "y2": 1069.97314453125
+        },
+        {
+          "label": "brave",
+          "conf": 0.72453373670578,
+          "x1": 954.922119140625,
+          "y1": 1041.459716796875,
+          "x2": 971.7705078125,
+          "y2": 1069.089599609375
+        },
+        {
+          "label": "brave",
+          "conf": 0.18756791949272156,
+          "x1": 28.10089111328125,
+          "y1": 1036.85791015625,
+          "x2": 46.71086883544922,
+          "y2": 1060.11962890625
+        }
+      ]
+    },
+    {
+      "attempt": 5,
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\performance\\attempt-05.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.8284493684768677,
+          "x1": 1039.87939453125,
+          "y1": 1041.80517578125,
+          "x2": 1063.67236328125,
+          "y2": 1070.03076171875
+        },
+        {
+          "label": "brave",
+          "conf": 0.7753359079360962,
+          "x1": 954.9638671875,
+          "y1": 1041.469482421875,
+          "x2": 971.6025390625,
+          "y2": 1068.920166015625
+        },
+        {
+          "label": "brave",
+          "conf": 0.1954195350408554,
+          "x1": 28.051834106445312,
+          "y1": 1036.8509521484375,
+          "x2": 46.705360412597656,
+          "y2": 1060.1444091796875
+        }
+      ]
+    }
+  ]
+}

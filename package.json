@@ -1,0 +1,17 @@
+{
+  "name": "ai-companion",
+  "version": "1.0.0",
+  "description": "Electron AI companion that can chat and control computer input (keyboard/mouse)",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "electron": "^28.0.0",
+    "node-fetch": "^3.3.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.0.0"
+  }
+}

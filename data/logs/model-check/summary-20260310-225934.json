@@ -1,0 +1,255 @@
+{
+  "model": "C:\\Users\\joon1\\Documents\\ai-companion\\best (1).pt",
+  "labels": [
+    "searchbar"
+  ],
+  "conf": 0.2,
+  "tries": 8,
+  "delay": 1.0,
+  "runs": [
+    {
+      "attempt": 1,
+      "timestamp": "20260310-225924-693786",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-01-20260310-225924-693786.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7669765949249268,
+          "x1": 1060.451416015625,
+          "y1": 1041.852783203125,
+          "x2": 1085.864990234375,
+          "y2": 1069.631103515625,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.6591347455978394,
+          "x1": 975.0117797851562,
+          "y1": 1041.701416015625,
+          "x2": 995.1493530273438,
+          "y2": 1069.285888671875,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 2,
+      "timestamp": "20260310-225926-116888",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-02-20260310-225926-116888.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7697402238845825,
+          "x1": 1060.461669921875,
+          "y1": 1041.85595703125,
+          "x2": 1085.865478515625,
+          "y2": 1069.63671875,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.6460182666778564,
+          "x1": 974.87158203125,
+          "y1": 1041.680419921875,
+          "x2": 995.24267578125,
+          "y2": 1069.438720703125,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 3,
+      "timestamp": "20260310-225927-398155",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-03-20260310-225927-398155.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.780066967010498,
+          "x1": 1060.768310546875,
+          "y1": 1041.78857421875,
+          "x2": 1085.509033203125,
+          "y2": 1069.64697265625,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.6572943329811096,
+          "x1": 975.0223999023438,
+          "y1": 1041.7138671875,
+          "x2": 995.1421508789062,
+          "y2": 1069.27734375,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 4,
+      "timestamp": "20260310-225928-681854",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-04-20260310-225928-681854.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.779037594795227,
+          "x1": 1060.45556640625,
+          "y1": 1041.840576171875,
+          "x2": 1085.87158203125,
+          "y2": 1069.620849609375,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.6638028621673584,
+          "x1": 975.090087890625,
+          "y1": 1041.730712890625,
+          "x2": 995.0899658203125,
+          "y2": 1069.204345703125,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 5,
+      "timestamp": "20260310-225929-959483",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-05-20260310-225929-959483.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7847815155982971,
+          "x1": 1060.78076171875,
+          "y1": 1041.759521484375,
+          "x2": 1085.49755859375,
+          "y2": 1069.629638671875,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.6781225204467773,
+          "x1": 975.2640380859375,
+          "y1": 1041.7689208984375,
+          "x2": 994.9832763671875,
+          "y2": 1068.9871826171875,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 6,
+      "timestamp": "20260310-225931-246846",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-06-20260310-225931-246846.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7754158973693848,
+          "x1": 1060.46337890625,
+          "y1": 1041.8453369140625,
+          "x2": 1085.85791015625,
+          "y2": 1069.6256103515625,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.6656202673912048,
+          "x1": 975.1317138671875,
+          "y1": 1041.740966796875,
+          "x2": 995.0623779296875,
+          "y2": 1069.139404296875,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 7,
+      "timestamp": "20260310-225932-556822",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-07-20260310-225932-556822.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7729392051696777,
+          "x1": 1060.287109375,
+          "y1": 1041.875244140625,
+          "x2": 1085.99658203125,
+          "y2": 1069.553466796875,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.6801007986068726,
+          "x1": 971.0816650390625,
+          "y1": 1041.712890625,
+          "x2": 997.9830322265625,
+          "y2": 1076.888671875,
+          "matchWanted": false
+        },
+        {
+          "label": "cursor",
+          "conf": 0.45250195264816284,
+          "x1": 1442.6907958984375,
+          "y1": 889.320556640625,
+          "x2": 1457.4739990234375,
+          "y2": 900.3974609375,
+          "matchWanted": false
+        },
+        {
+          "label": "cursor",
+          "conf": 0.4206025302410126,
+          "x1": 787.343505859375,
+          "y1": 542.7362060546875,
+          "x2": 803.177490234375,
+          "y2": 556.8629150390625,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.3255172669887543,
+          "x1": 1634.634521484375,
+          "y1": 1046.920166015625,
+          "x2": 1650.7138671875,
+          "y2": 1065.5205078125,
+          "matchWanted": false
+        },
+        {
+          "label": "cursor",
+          "conf": 0.2437194436788559,
+          "x1": 1102.6572265625,
+          "y1": 625.5053100585938,
+          "x2": 1122.34375,
+          "y2": 639.0518188476562,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 8,
+      "timestamp": "20260310-225933-958316",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-08-20260310-225933-958316.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7862117886543274,
+          "x1": 1060.793701171875,
+          "y1": 1041.7694091796875,
+          "x2": 1085.503173828125,
+          "y2": 1069.6182861328125,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.689769446849823,
+          "x1": 975.32861328125,
+          "y1": 1041.772216796875,
+          "x2": 994.911865234375,
+          "y2": 1068.903076171875,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    }
+  ]
+}

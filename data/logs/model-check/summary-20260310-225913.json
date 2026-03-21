@@ -1,0 +1,300 @@
+{
+  "model": "C:\\Users\\joon1\\Documents\\ai-companion\\best (1).pt",
+  "labels": [
+    "searchbar"
+  ],
+  "conf": 0.2,
+  "tries": 8,
+  "delay": 1.0,
+  "runs": [
+    {
+      "attempt": 1,
+      "timestamp": "20260310-225904-097848",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-01-20260310-225904-097848.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7477786540985107,
+          "x1": 1060.608154296875,
+          "y1": 1041.80810546875,
+          "x2": 1085.995849609375,
+          "y2": 1069.567626953125,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.6294674277305603,
+          "x1": 974.153076171875,
+          "y1": 1041.434326171875,
+          "x2": 995.278564453125,
+          "y2": 1070.249755859375,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.4408518373966217,
+          "x1": 1634.575927734375,
+          "y1": 1046.6435546875,
+          "x2": 1650.810791015625,
+          "y2": 1065.468994140625,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 2,
+      "timestamp": "20260310-225905-481058",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-02-20260310-225905-481058.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.6680876016616821,
+          "x1": 1060.49169921875,
+          "y1": 1041.925048828125,
+          "x2": 1085.98681640625,
+          "y2": 1069.657470703125,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.5373987555503845,
+          "x1": 971.2239990234375,
+          "y1": 1041.0728759765625,
+          "x2": 997.5428466796875,
+          "y2": 1075.3519287109375,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.4334564507007599,
+          "x1": 1634.64892578125,
+          "y1": 1046.674072265625,
+          "x2": 1650.76904296875,
+          "y2": 1065.419677734375,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 3,
+      "timestamp": "20260310-225906-709318",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-03-20260310-225906-709318.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7194944620132446,
+          "x1": 1060.66015625,
+          "y1": 1041.88671875,
+          "x2": 1085.9326171875,
+          "y2": 1069.571533203125,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.5805601477622986,
+          "x1": 973.1650390625,
+          "y1": 1041.377197265625,
+          "x2": 995.9130859375,
+          "y2": 1071.931396484375,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.4292931854724884,
+          "x1": 1634.66552734375,
+          "y1": 1046.719482421875,
+          "x2": 1650.7509765625,
+          "y2": 1065.440185546875,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 4,
+      "timestamp": "20260310-225907-936998",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-04-20260310-225907-936998.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7280277609825134,
+          "x1": 1060.651123046875,
+          "y1": 1041.9061279296875,
+          "x2": 1085.921142578125,
+          "y2": 1069.5731201171875,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.6143509149551392,
+          "x1": 973.92724609375,
+          "y1": 1041.544189453125,
+          "x2": 995.45361328125,
+          "y2": 1070.708740234375,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.4077839255332947,
+          "x1": 1634.658203125,
+          "y1": 1046.603271484375,
+          "x2": 1650.745361328125,
+          "y2": 1065.397216796875,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 5,
+      "timestamp": "20260310-225909-178658",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-05-20260310-225909-178658.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7815878987312317,
+          "x1": 1060.762451171875,
+          "y1": 1041.880859375,
+          "x2": 1086.104736328125,
+          "y2": 1069.5986328125,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.670089066028595,
+          "x1": 973.99267578125,
+          "y1": 1041.396240234375,
+          "x2": 995.599609375,
+          "y2": 1070.86669921875,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.46462303400039673,
+          "x1": 1634.714111328125,
+          "y1": 1046.6490478515625,
+          "x2": 1650.75341796875,
+          "y2": 1065.3975830078125,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.41324102878570557,
+          "x1": 778.6090698242188,
+          "y1": 873.4239501953125,
+          "x2": 792.4234008789062,
+          "y2": 890.522216796875,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 6,
+      "timestamp": "20260310-225910-419299",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-06-20260310-225910-419299.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7495055794715881,
+          "x1": 1060.683837890625,
+          "y1": 1041.85498046875,
+          "x2": 1085.901123046875,
+          "y2": 1069.5478515625,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.588277280330658,
+          "x1": 973.3898315429688,
+          "y1": 1041.4461669921875,
+          "x2": 995.7494506835938,
+          "y2": 1071.5050048828125,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.46799761056900024,
+          "x1": 1634.69921875,
+          "y1": 1046.7957763671875,
+          "x2": 1650.7568359375,
+          "y2": 1065.4537353515625,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 7,
+      "timestamp": "20260310-225911-673228",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-07-20260310-225911-673228.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7448110580444336,
+          "x1": 1060.6610107421875,
+          "y1": 1041.871826171875,
+          "x2": 1085.9022216796875,
+          "y2": 1069.565185546875,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.5687108039855957,
+          "x1": 972.9534912109375,
+          "y1": 1041.371337890625,
+          "x2": 995.9735107421875,
+          "y2": 1072.155517578125,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.46405449509620667,
+          "x1": 1634.68359375,
+          "y1": 1046.74072265625,
+          "x2": 1650.76318359375,
+          "y2": 1065.45263671875,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    },
+    {
+      "attempt": 8,
+      "timestamp": "20260310-225912-918623",
+      "annotatedImage": "C:\\Users\\joon1\\Documents\\ai-companion\\data\\logs\\model-check\\attempt-08-20260310-225912-918623.png",
+      "detections": [
+        {
+          "label": "edge",
+          "conf": 0.7858759164810181,
+          "x1": 1060.7509765625,
+          "y1": 1041.850341796875,
+          "x2": 1086.06689453125,
+          "y2": 1069.596435546875,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.7050394415855408,
+          "x1": 975.0565185546875,
+          "y1": 1041.74072265625,
+          "x2": 994.80712890625,
+          "y2": 1069.2294921875,
+          "matchWanted": false
+        },
+        {
+          "label": "brave",
+          "conf": 0.4833228886127472,
+          "x1": 1634.71533203125,
+          "y1": 1046.907470703125,
+          "x2": 1650.814453125,
+          "y2": 1065.519775390625,
+          "matchWanted": false
+        }
+      ],
+      "matchedCount": 0
+    }
+  ]
+}

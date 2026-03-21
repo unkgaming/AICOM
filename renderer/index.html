@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AI Companion</title>
+  <style>
+    :root {
+      --bg: rgba(255, 255, 255, 0.9);
+      --panel: #f7f9fc;
+      --border: #d9e1ef;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #2563eb;
+      --accent-2: #1d4ed8;
+      --user-bg: #dcfce7;
+      --bot-bg: #eef2ff;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    #app {
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.2);
+      overflow: hidden;
+      -webkit-app-region: drag;
+    }
+
+    #header {
+      padding: 12px 14px;
+      background: linear-gradient(90deg, #eff6ff, #eef2ff);
+      border-bottom: 1px solid var(--border);
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: #1e3a8a;
+    }
+
+    #chatLog {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background: var(--panel);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      -webkit-app-region: no-drag;
+    }
+
+    #inputArea {
+      display: flex;
+      gap: 8px;
+      padding: 10px;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+      -webkit-app-region: no-drag;
+    }
+
+    #userInput {
+      flex: 1;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 10px;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 120ms ease, box-shadow 120ms ease;
+    }
+
+    #userInput:focus {
+      border-color: #93c5fd;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    button {
+      padding: 9px 12px;
+      border: none;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 120ms ease, transform 120ms ease;
+    }
+
+    button:hover {
+      background: var(--accent-2);
+      transform: translateY(-1px);
+    }
+
+    #voiceBtn.listening {
+      background: #dc2626;
+    }
+
+    #voiceLang {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px;
+      font-size: 12px;
+      background: #fff;
+      color: var(--text);
+      max-width: 110px;
+    }
+
+    .msg {
+      max-width: 88%;
+      padding: 9px 11px;
+      border-radius: 12px;
+      line-height: 1.35;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+      font-size: 13px;
+      border: 1px solid rgba(148, 163, 184, 0.28);
+    }
+
+    .msg.user {
+      margin-left: auto;
+      text-align: left;
+      background: var(--user-bg);
+      color: #14532d;
+    }
+
+    .msg.bot {
+      margin-right: auto;
+      text-align: left;
+      background: var(--bot-bg);
+      color: #1e3a8a;
+    }
+
+    #chatLog:empty::before {
+      content: "Start chatting with your AI companion...";
+      color: var(--muted);
+      font-size: 13px;
+      padding: 6px 2px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="header">AI Companion</div>
+    <div id="chatLog"></div>
+    <div id="inputArea">
+      <input id="userInput" placeholder="Try: /news ai, discord message hello, /ls, /read file, /write file :: text" />
+      <select id="voiceLang" title="Voice language">
+        <option value="en-US">EN</option>
+        <option value="th-TH">TH</option>
+        <option value="ja-JP">JP</option>
+        <option value="ko-KR">KR</option>
+      </select>
+      <button id="voiceBtn" title="Voice command">🎤</button>
+      <button id="sendBtn">Send</button>
+      <button id="screenshotBtn">Screenshot</button>
+    </div>
+  </div>
+
+  <!-- only this script -->
+  <script src="./renderer.js"></script>
+</body>
+</html>

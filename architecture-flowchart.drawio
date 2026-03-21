@@ -1,0 +1,109 @@
+<mxfile host="65bd71144e">
+    <diagram id="focused-architecture" name="Focused Architecture">
+        <mxGraphModel dx="781" dy="479" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="user" value="User Prompt&#xa;example: open brave, search youtube, click first video" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#6aa84f;fontSize=15;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="290" width="220" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="ui" value="Electron Chat UI&#xa;renderer + preload + IPC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfe2f3;strokeColor=#3d85c6;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="290" width="220" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="ollama" value="Ollama Brain&#xa;interprets request&#xa;decides response vs automation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9d2e9;strokeColor=#674ea7;fontSize=15;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="120" width="260" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="orchestrator" value="Electron Main Orchestrator&#xa;electron/main.js&#xa;parses commands and runs workflow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4cccc;strokeColor=#cc0000;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="290" width="260" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="detector" value="Trained Model Detection&#xa;scripts/detect_ui.py&#xa;YOLO model: best (1).pt&#xa;finds browser, searchbar, UI targets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#b45f06;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="70" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="action" value="Action Layer&#xa;scripts/input-control.ps1&#xa;mouse move, click, type, open app" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ead1dc;strokeColor=#a64d79;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="960" y="320" width="290" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="screen" value="Desktop / Browser Screen&#xa;live UI that the model sees" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#666666;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1380" y="135" width="220" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="effect" value="Real Action Result&#xa;browser opens, search runs, video opens" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1380" y="320" width="220" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="shot" value="Annotated screenshot + status&#xa;sent back to chat" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0e0e3;strokeColor=#45818e;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="500" width="290" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" value="prompt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="user" target="ui" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" value="IPC message" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="ui" target="orchestrator" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" value="chat reasoning / intent decision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="orchestrator" target="ollama" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="740" y="250"/>
+                            <mxPoint x="740" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" value="automation plan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="ollama" target="orchestrator" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="700" y="260"/>
+                            <mxPoint x="700" y="260"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" value="run detection" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="orchestrator" target="detector" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1105" y="310"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e6" value="capture screen" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="detector" target="screen" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" value="target boxes + coordinates" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="detector" target="orchestrator" edge="1">
+                    <mxGeometry x="0.1875" y="-20" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1020" y="290"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e8" value="click / type / move" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="orchestrator" target="action" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e9" value="executes on desktop" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="action" target="effect" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1280" y="370"/>
+                            <mxPoint x="1280" y="370"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e10" value="updated screen" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="effect" target="screen" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11" value="result frame" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="orchestrator" target="shot" edge="1">
+                    <mxGeometry x="-0.6235" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="770" y="460"/>
+                            <mxPoint x="770" y="460"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e12" value="reply + screenshot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="shot" target="ui" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="700" y="545"/>
+                            <mxPoint x="430" y="545"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,5 @@
+{
+  "name": "sample-model",
+  "textures": ["textures/texture_00.png"],
+  "motions": ["motions/idle.motion3.json"]
+}
