@@ -115,12 +115,20 @@ async function sendMessage() {
   try {
     const res = await window.electronAPI.sendChat(text);
     console.log("📥 Response from main:", res);
-    if (Array.isArray(res.screenshotFrames) && res.screenshotFrames.length > 0) {
+    const annotatedFrames = [];
+    if (Array.isArray(res.screenshotFrames)) {
       for (const frame of res.screenshotFrames) {
-        appendImage(frame, "bot");
+        if (isAnnotatedDetectionFrame(frame)) annotatedFrames.push(frame);
       }
-    } else if (res.screenshotUsed && res.screenshotDataUrl) {
-      appendImage(res.screenshotDataUrl, "bot");
+    }
+    if (annotatedFrames.length === 0 && isAnnotatedDetectionFrame(res.screenshotDataUrl)) {
+      annotatedFrames.push(res.screenshotDataUrl);
+    }
+    for (const frame of annotatedFrames) {
+      appendImage(frame, "bot");
+    }
+    if (Array.isArray(res.detectionResults) && res.detectionResults.length > 0) {
+      appendMsg(formatDetectionResults(res.detectionResults), "bot");
     }
     if (res.error) appendMsg("Error: " + res.error, "bot");
     else appendMsg(res.reply, "bot");
@@ -128,6 +136,33 @@ async function sendMessage() {
     console.error("IPC error:", err);
     appendMsg("IPC failed: " + err.message, "bot");
   }
+}
+
+function isAnnotatedDetectionFrame(dataUrl) {
+  if (typeof dataUrl !== "string") return false;
+  return /^data:image\/(jpeg|jpg);base64,/i.test(dataUrl);
+}
+
+function formatDetectionResults(results) {
+  const lines = ["YOLO detections:"];
+  for (const item of results) {
+    const stage = item?.stage ? String(item.stage) : "step";
+    const picked = item?.picked || null;
+    const seen = Array.isArray(item?.seenLabels) ? item.seenLabels : [];
+    if (picked) {
+      const label = String(picked.label || "unknown");
+      const conf = Number(picked.conf || 0);
+      const x = Number(picked.x || 0);
+      const y = Number(picked.y || 0);
+      lines.push(`- ${stage}: ${label} conf=${conf.toFixed(3)} at (${x}, ${y})`);
+    } else {
+      lines.push(`- ${stage}: no picked target`);
+    }
+    if (seen.length > 0) {
+      lines.push(`  seen: ${seen.join(", ")}`);
+    }
+  }
+  return lines.join("\n");
 }
 
 function appendMsg(text, who = "bot") {
@@ -144,7 +179,7 @@ function appendImage(dataUrl, who = "bot") {
 
   const img = document.createElement("img");
   img.src = dataUrl;
-  img.alt = "screenshot";
+  img.alt = "detection";
   img.style.maxWidth = "100%";
   img.style.borderRadius = "8px";
   img.style.marginTop = "6px";
@@ -154,3 +189,4 @@ function appendImage(dataUrl, who = "bot") {
   chatLog.appendChild(wrap);
   chatLog.scrollTop = chatLog.scrollHeight;
 }
+
